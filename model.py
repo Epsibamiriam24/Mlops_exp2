@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 #from sklearn.preprocessing import
-d=pd.read_csv(r"C:\Users\epsib\OneDrive\Documents\Honours Project\ML_Model_1\improved_disease_dataset.csv")
+d=pd.read_csv("data/improved_disease_dataset.csv")
 d.head()
 d.tail()
 #print(d.shape)
