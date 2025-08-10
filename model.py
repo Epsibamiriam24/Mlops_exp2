@@ -2,6 +2,7 @@
 print("URK23CS1077")
 import numpy as np
 import pandas as pd
+import sys
 #import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
@@ -10,6 +11,14 @@ from sklearn.metrics import accuracy_score
 d = pd.read_csv("data/improved_disease_dataset.csv")
 d.head()
 d.tail()
+# Check for empty data
+if d.empty:
+    print("ERROR: Dataset is empty!")
+    sys.exit(1)  # Stop the script with error
+
+# Check for duplicates
+if d.duplicated().any():
+    print("WARNING: Dataset contains duplicate rows")
 #print(d.shape)
 #sns.heatmap(d.corr(), annot=True)  # removed seaborn heatmap
 
